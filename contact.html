@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="contact.css" type="text/css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;1,600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1> <a href="index.html" style="color: black;"> CONNECT WITH US </a> </h1>
+        <P> We would love to respond to your queries and help you succeed.<br>Feel 
+            free to get in touch with us.</P>
+            <div class="contact-box">
+                <div class="contact-left">
+                    <h3> Send your request</h3>
+                    <form onsubmit="return validateName">
+                        <div class="input-row">
+                          <div class="input-group">
+                            <label for="name">Name:</label>
+                            <input type="text" id="name" name="name" placeholder="John Cena">
+                          </div>
+                          <div class="input-group">
+                            <label for="phone">Phone:</label>
+                            <input type="text" id="phone" name="phone" placeholder="+977-9862626262">
+                          </div>
+                        </div>
+                        <div class="input-row">
+                          <div class="input-group">
+                            <label for="email">E-mail:</label>
+                            <input type="email" id="email" name="email" placeholder="JohnCena@gmail.com">
+                          </div>
+                          <div class="input-group">
+                            <label for="subject">Subject:</label>
+                            <input type="text" id="subject" name="subject" placeholder="Product Demo">
+                          </div>
+                        </div>
+                        <label for="message">Message:</label>
+                        <textarea id="message" name="message" rows="5" placeholder="Your Message"></textarea>
+                        <button type="submit">SEND</button>
+                      </form>
+                      
+                      <script>
+                        const nameInput = document.getElementById("name");
+                        const nameRegex = /^[a-zA-Z\s]*$/; // regular expression to allow only letters and spaces
+                      
+                        function validateName() {
+                          const name = nameInput.value.trim();
+                          if (!nameRegex.test(name)) {
+                            nameInput.setCustomValidity("Name cannot contain numbers or special characters");
+                          } else {
+                            nameInput.setCustomValidity("");
+                          }
+                        }
+                      
+                        nameInput.addEventListener("input", validateName);
+                      </script>
+                      
+                </div>
+                <div class="contact-right">
+                    <h3> Reach Us</h3>
+
+
+                    <table>
+                        <tr>
+                            <td>E-mail</td>
+                            <td>contactus@example.com</td>
+                        </tr>
+                        <tr>
+                            <td>Phone</td>
+                            <td>+977-9862626262</td>
+
+
+                        </tr>
+                        <tr>
+                            <td>Address</td>
+                            <td class="Newroad">Newroad, ABC 3 ,Kathmandu, Nepal</td>
+
+
+                        </tr>
+                    </table>
+                </div>
+
+            </div>
+    </div>
+</body>
+</html>
